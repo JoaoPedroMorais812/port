@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | João Pedro Morais do Prado</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="dark">
+
+    <button id="themeToggle" class="theme-btn">🌙 Modo claro</button>
+
+    <header>
+        <div class="profile">
+            <img src="CSS/foto.png" alt="Foto de perfil">
+
+        </div>
+
+        <h1>João Pedro Morais do Prado</h1>
+        <p>Desenvolvedor Web | Recém Formado | Criador de Projetos</p>
+        <nav class="navbar">
+            <a href="#sobre">Sobre mim</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#aprendendo">Aprendendo</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+            <a href="#curriculo">curriculo</a>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre mim</h2>
+        <p>
+            Recém formado em Técnico em Desenvolvimento de Sistemas pela Etec Prof° Alfredo de Barros Santos,
+            procurando experiencia na área profissional.
+        </p>
+    </section>
+
+    <section id="habilidades" class="sec-1">
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React-Native</span>
+            <span>PHP</span>
+        </div>
+    </section>
+
+    <section id="aprendendo" class="sec-2">
+        <h2>Aprendendo</h2>
+        <div class="skills">
+            <span>Node.js</span>
+            <span>Python</span>
+            <span>Laravel</span>
+            <span>TypeScript</span>
+            <span>WordPress</span>
+            <span>C++</span>
+        </div>
+    </section>
+
+    <section id="projetos" class="sec-1">
+        <h2>Projetos Pequenos</h2>
+        <div class="projects-p">
+
+            <div class="card">
+                <h3>Lista de Tarefas</h3>
+                <p>To-do list com salvamento no navegador.</p>
+                <a href="#" target="_blank">Ver projeto</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section i class="sec-2">
+        <h2>Projetos Médios</h2>
+        <div class="projects-m"></div>
+    </section>
+
+    <section class="sec-1">
+        <h2>Projetos Grandes</h2>
+        <div class="projects-g"></div>
+    </section>
+    <section id="contato">
+        <h2>Contato</h2>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:joaomoraisjp88@gmail.com">Email/Joao Morais</a>
+        </p>
+
+        <p>
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/joaopedromorais812">github.com/Joao Morais</a>
+        </p>
+
+        <p>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-morais-jp-ba8110286/">linkedin.com/in/João Morais JP</a>
+        </p>
+
+        <p>
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://www.instagram.com/joaoprado07?igsh=ZjFxajRoanRsdXIw">
+                instagram.com/Joao Morais
+            </a>
+        </p>
+
+        <p id="curriculo">
+            <i class="fa-solid fa-download"></i>
+            <a href="Curriculo.pdf" download target="_blank">Baixar currículo</a>
+        </p>
+    </section>
+
+
+    <footer>
+        <p>© 2026 - João Pedro Morais do Prado</p>
+
+
+    </footer>
+
+    <script>
+        // Alternar tema
+        const toggleBtn = document.getElementById('themeToggle');
+        const body = document.body;
+
+        function setTheme(theme) {
+            body.className = theme;
+            localStorage.setItem('theme', theme);
+            toggleBtn.textContent = theme === 'dark' ? '☀️ Modo claro' : '🌙 Modo escuro';
+        }
+
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+
+        toggleBtn.addEventListener('click', () => {
+            const newTheme = body.className === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+    </script>
+
+</body>
+
+</html>
